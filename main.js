@@ -3,7 +3,7 @@ const APPLICANT_NAME = "applicantName";
 function isExpired(obj) {
     const ONE_HOUR = 3600000;
     now = new Date().getTime().toString();
-    return ((now - obj.timestamp) < ONE_HOUR);
+    return ((now - obj.timestamp) > ONE_HOUR);
 }
 
 function getApplicantNameFromStorage() {
