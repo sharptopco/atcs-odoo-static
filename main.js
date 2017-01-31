@@ -10,6 +10,7 @@ function getApplicantNameFromStorage() {
     var object = JSON.parse(localStorage.getItem(APPLICANT_NAME));
 
     if (object  && isExpired(object)) {
+        console.log("Removing " + APPLICANT_NAME + " from localStorage.");
         localStorage.removeItem(APPLICANT_NAME);
         object = null
     }
